@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Ukrainian News</string>
     <string name="retry_now">Retry now</string>
+    <string name="search_for_news">Search for news...</string>
+    <string name="no_results_found">No results found.</string>
+    <string name="there_are_no_bookmarks">There are no bookmarks</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="bookmarks">Bookmarks</string>
 </resources>
