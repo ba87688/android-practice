@@ -42,6 +42,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         transaction.commit()
+
+        title = when (selectedFragment){
+            is BreakingNewsFragment -> getString(R.string.home)
+            is SearchNewsFragment -> getString(R.string.search)
+            is BookmarksFragment -> getString(R.string.bookmarks)
+            else -> ""
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,6 +94,16 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+    }
+
+    override fun onBackPressed() {
+        if(selectedIndex!=0){
+            binding.buttonNav.selectedItemId = R.id.home_nav
+
+        }
+        else{
+            super.onBackPressed()
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
