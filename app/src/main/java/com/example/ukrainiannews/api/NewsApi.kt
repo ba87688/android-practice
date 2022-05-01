@@ -1,6 +1,9 @@
 package com.example.ukrainiannews.api
 
 import com.example.ukrainiannews.BuildConfig
+import retrofit2.http.GET
+import retrofit2.http.Headers
+import retrofit2.http.Query
 
 interface NewsApi {
 
@@ -9,5 +12,16 @@ interface NewsApi {
         const val API = BuildConfig.API_KEY
     }
 
+    @Headers("X-Api-Key: $API")
+    @GET("top-headlines?country=us&pageSize=100")
+    suspend fun getBreakingNews(): NewsResponse
 
+    @Headers("X-Api-Key: $API")
+    @GET("everything")
+    suspend fun searchNews(
+        @Query("q") query: String,
+        @Query("page") page:Int,
+        @Query("pageSize") pageSize:Int
+
+    ) :NewsResponse
 }
