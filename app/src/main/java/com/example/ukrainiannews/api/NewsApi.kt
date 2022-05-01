@@ -23,5 +23,7 @@ interface NewsApi {
         @Query("page") page:Int,
         @Query("pageSize") pageSize:Int
 
+
+
     ) :NewsResponse
 }
