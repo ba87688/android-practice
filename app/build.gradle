@@ -84,6 +84,8 @@ dependencies {
 
     implementation 'android.arch.lifecycle:extensions:1.0.0-alpha1'
     annotationProcessor 'android.arch.lifecycle:compiler:1.0.0-alpha1'
+    implementation "androidx.room:room-ktx:2.2.5"
+    kapt "androidx.room:room-compiler:2.2.5"
 }
 kapt{
     correctErrorTypes true
